@@ -67,8 +67,8 @@ public class Car { 	//class 선언
 	}
 	
 	
-	public Boolean isLargeCar(){
-		return this.carType == LARGE_CAR ? true : false;
+	public Boolean isLargeCar(){  // 객체 method에서 static 상수 사용.
+		return this.carType == LARGE_CAR ? true : false; // 객체 method가 호출 되었다는것은
 	}
 	
 	public Boolean isMoreExpensive(Car car2){ // car2 비교대상 필요
@@ -94,6 +94,11 @@ public class Car { 	//class 선언
 		}
 		return "unknown";
 	}
+	
+//	public static String staticMethod(){ // class.method명으로 호출 가능.
+//		return this.companyName;		// error : 객체 변수는 static method가 호출 되었을때 
+//										// 객체가 생성된건지 알수 없다.
+//	}
 	
 	
 }
